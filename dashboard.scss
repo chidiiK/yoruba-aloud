@@ -1,0 +1,58 @@
+body {
+  .big-container {
+    background-color: #fff;
+    display: flex;
+    gap: 5rem;
+    margin-top: 3rem;
+
+    .menu {
+      background-color: #4594e1;
+      color: #fff;
+      width: 18%;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+
+      div {
+        border: 1px solid rgba(128, 128, 128, 0.192);
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+
+        p {
+          font-weight: bold;
+        }
+
+        span {
+          font-weight: bold;
+        }
+
+        
+          button {
+            background-color: #4594e1;
+            color: #fff;
+            padding: 1rem;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+          }
+        
+      }
+    }
+  }
+}

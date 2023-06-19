@@ -1,0 +1,46 @@
+body .big-container {
+  background-color: #fff;
+  display: flex;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+body .big-container .menu {
+  background-color: #4594e1;
+  color: #fff;
+  width: 18%;
+}
+body .big-container .menu ul {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+body .big-container .menu ul li {
+  list-style: none;
+}
+body .big-container .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+body .big-container .cards div {
+  border: 1px solid rgba(128, 128, 128, 0.192);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+}
+body .big-container .cards div p {
+  font-weight: bold;
+}
+body .big-container .cards div span {
+  font-weight: bold;
+}
+body .big-container .cards div button {
+  background-color: #4594e1;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}/*# sourceMappingURL=dashboard.css.map */
