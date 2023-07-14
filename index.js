@@ -5,7 +5,7 @@ const login = document.getElementById("login");
 
 // 2. adding event listener to button
 
-login.addEventListener("click", (event) => {
+login.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // 3. getting the id for input and assigning to variable "username" && "password"
@@ -14,6 +14,7 @@ login.addEventListener("click", (event) => {
   const password = document.getElementById("password").value;
 
   login.innerHTML = "signing in";
+  login.classList.add("pulse");
 
   // 4. conditional statement to check for empty strings in input
 
@@ -25,6 +26,7 @@ login.addEventListener("click", (event) => {
     });
 
     login.innerHTML = "Login";
+    login.classList.remove("pulse");
   }
 
   // 5.  creating a new object and appending key value pairs "username & password"
@@ -49,7 +51,7 @@ login.addEventListener("click", (event) => {
     fetch(URL, loginReq)
       .then((response) => response.json())
       .then((result) => {
-        console.log(result, result.status);
+        console.log("result----->", result);
 
         // 9. sending and storing data in the localStorage
 
@@ -75,7 +77,8 @@ login.addEventListener("click", (event) => {
           });
         }
 
-        signIn.textContent = "Sign In";
+        login.textContent = "Sign In";
+        login.classList.remove("pulse");
       });
   }
 });

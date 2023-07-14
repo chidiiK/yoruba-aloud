@@ -12,63 +12,159 @@
 <body>
     <main>
 
-        <div class="big-container">
+
+        <section id="sidebar" class="nav-bar">
 
 
-            <div class="menu">
-                <h2><i class='bx bxs-bug' style="font-size: 25px;"></i> Yoruba Aloud</h2>
 
-                <ul>
-                    <li><i class='bx bx-home'></i> Dashboard</li>
-                    <li><i class='bx bx-category'></i> Categories</li>
-                    <li><i class='bx bx-book-content'></i> Learning Materials</li>
-                    <li><i class='bx bx-cog'></i> Quiz</li>
-                    <li><i class='bx bxs-user-detail'></i> Admin Profile</li>
-                    <li><i class='bx bxs-log-out'></i> Logout</li>
+            <div class="nav" id="navigation">
+
+                <ul class="side-menu">
+
+                    <li class="logo">
+                        <a href="#" class="brand">
+                            <i class="bx bxl-ok-ru"></i><span>Yoruba Aloud</span>
+                        </a>
+                    </li>
+
+
+                    <li id="menu">
+                        <a href="#" class="active">
+                            <i class="bx bx-home"></i> <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li id="menu">
+                        <a href="category.html">
+                            <i class="bx bx-category"></i>
+                            <span class="text">Categories</span>
+                        </a>
+                    </li>
+                    <li id="menu">
+                        <a href="#">
+                            <i class="bx bx-book-content"></i>
+                            <span class="text" id="learn">Learning Materials</span>
+                        </a>
+                    </li>
+                    <li id="menu">
+                        <a href="#">
+                            <i class="bx bx-certification"></i>
+                            <span class="text">Quiz</span>
+                        </a>
+                    </li>
+                    <li id="menu">
+                        <a href="admin.html">
+                            <i class="bx bxs-user-detail"></i>
+                            <span class="text">Admin Profile</span>
+                        </a>
+                    </li>
+                    <li id="menu">
+                        <a href="#" class="logout" onclick="logout()">
+                            <i class="bx bxs-log-out-circle"></i>
+                            <span class="text">Logout</span>
+                        </a>
+                    </li>
                 </ul>
 
             </div>
+        </section>
 
 
-            <div class="cards-container">
-                <div><p><i class='bx bx-signal-3'></i>Femisunday</p></div>
 
-                <div class="cards">
-                
+        <div class="cards-container">
+
+            <div class="top-bar">
+                <div class="toggle" id="toggle-btn">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="search">
+                        <i class='bx bx-search'></i>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+
                 <div class="card-one">
                     <p><i class='bx bx-signal-3'></i></p>
                     <p>Total Categories</p>
-                    <span>2</span>
+                    <span id="category"></span>
+
                 </div>
                 <div class="card-two">
-                   <p> <i class='bx bx-book-open'></i></p>
+                    <p> <i class='bx bx-book-open'></i></p>
                     <p>Learning Materials</p>
-                    <span>12</span>
+                    <span id="learningMaterials"></span>
                 </div>
                 <div class="card-three">
                     <p><i class='bx bx-signal-3'></i></p>
                     <p>Total Sub-Categories</p>
-                    <span>2</span>
+                    <span id="subCategories"></span>
                 </div>
                 <div class="card-four">
-                   <p> <i class='bx bx-cog'></i></p>
+                    <p> <i class='bx bx-cog'></i></p>
                     <p>Total Quiz</p>
-                    <span>0</span>
+                    <span id="totalQuiz"></span>
+
                 </div>
                 <div class="card-five">
                     <p><i class='bx bxs-graduation'></i></p>
                     <p>Total Students</p>
-                    <span>0</span>
+                    <span id="totalStudents"></span>
+
                 </div>
                 <div class="card-six">
-                    <p><button>Top Three Students</button></p>
+                    <button id="topThreeStudents">Top Three Students</button>
                 </div>
-                
+
             </div>
 
-        </div>
+            <div id="pageModal" class="page-modal">
+                <div class="loader"></div>
+              </div>
+      
+              <!-- //Student Modal -->
+              <div id="studentModal" class="student-modal">
+                <div id="studentModalTitle" class="modal-title">
+                  <span>Top Three Students</span>
+                  <i class="bx bx-x" onclick="closeStudentModal()"></i>
+                </div>
+                <div id="topThreeScores"></div>
+              </div>
+      
+              <!-- //All Students Table -->
+              <div class="table" id="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone Number</th>
+                      <th>Position</th>
+                      <th>Total Score</th>
+                    </tr>
+                  </thead>
+                  <tbody id="allStudents"></tbody>
+                </table>
+              </div>
+            </div>
+          
+      
+
+        </div> 
 
     </main>
+
+    <script src="dashboard.js"></script>
 </body>
 
 </html>
+
+

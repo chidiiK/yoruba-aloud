@@ -17,7 +17,6 @@ signUp.addEventListener("click", (event) => {
   // conditional statement to check for empty strings from user
   if (
     name === "" ||
-    // userName === "" ||
     password === "" ||
     confirmPassword === "" ||
     email === ""
@@ -64,7 +63,7 @@ signUp.addEventListener("click", (event) => {
           });
 
           setTimeout(() => {
-            location.href = "login.html";
+            location.href = "index.html";
           }, 5000);
         } else {
           // Error message
